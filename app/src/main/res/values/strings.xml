@@ -1,3 +1,44 @@
 <resources>
-	<string name="app_name">weather</string>
+	<string name="app_name">Weather</string>
+
+	<string name="weather_current_geo">https://api.openweathermap.org/data/2.5/weather?lat=%1$f&amp;lon=%2$f&amp;appid=53f9d8e4213222cf517d86dc406d67fc"</string>
+	<string name="weather_icon">https://openweathermap.org/img/wn/%1$s%2$s.png</string>
+	<string name="icon_1x" />
+	<string name="icon_2x">\@2x</string>
+	<string name="icon_4x">\@4x</string>
+
+	<string name="degrees_int">%1$d\u00B0</string>
+	<string name="degrees_float">%1$.2f\u00B0</string>
+	<string name="percentage">%1$d%%</string>
+	<string name="pressure_format">%1$dhPa</string>
+	<string name="meters">%1$dm</string>
+	<string name="millimeters">%1$dmm</string>
+	<string name="meters_per_second">%1$.2fm/s</string>
+
+	<string name="lon">Lon</string>
+	<string name="lat">Lat</string>
+	<string name="min">Min</string>
+	<string name="max">Max</string>
+	<string name="feels_like">Feels Like</string>
+	<string name="sunrise">Sunrise</string>
+	<string name="sunset">Sunset</string>
+	<string name="degrees">Degrees</string>
+	<string name="gust">Gust</string>
+	<string name="sea_level">Sea Level</string>
+	<string name="ground_level">Ground Level</string>
+	<string name="cloudiness">Cloudiness</string>
+	<string name="visibility">Visibility</string>
+	<string name="humidity">Humidity</string>
+	<string name="snow">Snow</string>
+	<string name="rain">Rain</string>
+	<string name="last_hour">Last hour</string>
+	<string name="last_3_hours">Last 3 hours</string>
+	<string name="pressure">Pressure</string>
+	<string name="wind">Wind</string>
+	<string name="temperature">Temperature</string>
+	<string name="weather_icon_desc">Weather icon</string>
+	<string name="refresh">Refresh</string>
+
+	<string name="no_location_error">No location data found. Please try again later</string>
+	<string name="report_error">Error getting report: %1$s</string>
 </resources>
