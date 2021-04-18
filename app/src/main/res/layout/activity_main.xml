@@ -21,6 +21,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginHorizontal="4dp"
 				android:contentDescription="@string/weather_icon_desc"
+				android:visibility="invisible"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/lat_label"
 				tools:ignore="PxUsage"
@@ -37,6 +38,7 @@
 				android:layout_marginEnd="4dp"
 				android:ellipsize="end"
 				android:maxLines="1"
+				android:visibility="invisible"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
 				tools:text="2021-04-16T06:34:12+02:00[Africa/Johannesburg]" />
@@ -47,45 +49,50 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginEnd="8dp"
+				android:visibility="invisible"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/dt"
 				tools:text="UTC+2" />
 
 			<TextView
-				android:id="@+id/sunset_time"
+				android:id="@+id/sunset"
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/timezone"
 				app:layout_constraintEnd_toStartOf="@id/timezone"
 				tools:text="19:13" />
 
 			<TextView
-				android:id="@+id/sunset_time_label"
+				android:id="@+id/sunset_label"
 				style="@style/Label"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/sunset"
-				app:layout_constraintBottom_toBottomOf="@id/sunset_time"
-				app:layout_constraintEnd_toStartOf="@id/sunset_time" />
+				android:visibility="invisible"
+				app:layout_constraintBottom_toBottomOf="@id/sunset"
+				app:layout_constraintEnd_toStartOf="@id/sunset" />
 
 			<TextView
-				android:id="@+id/sunrise_time"
+				android:id="@+id/sunrise"
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				app:layout_constraintBaseline_toBaselineOf="@id/sunset_time_label"
-				app:layout_constraintEnd_toStartOf="@id/sunset_time_label"
+				android:visibility="invisible"
+				app:layout_constraintBaseline_toBaselineOf="@id/sunset_label"
+				app:layout_constraintEnd_toStartOf="@id/sunset_label"
 				tools:text="7:09 AM" />
 
 			<TextView
-				android:id="@+id/sunrise_time_label"
+				android:id="@+id/sunrise_label"
 				style="@style/Label"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/sunrise"
-				app:layout_constraintBottom_toBottomOf="@id/sunrise_time"
-				app:layout_constraintEnd_toStartOf="@id/sunrise_time" />
+				android:visibility="invisible"
+				app:layout_constraintBottom_toBottomOf="@id/sunrise"
+				app:layout_constraintEnd_toStartOf="@id/sunrise" />
 
 			<TextView
 				android:id="@+id/lon"
@@ -93,6 +100,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginEnd="8dp"
+				android:visibility="invisible"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/timezone"
 				tools:text="-124.46" />
@@ -103,6 +111,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/lon"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/lon"
 				app:layout_constraintEnd_toStartOf="@id/lon" />
 
@@ -111,6 +120,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/lon_label"
 				app:layout_constraintEnd_toStartOf="@id/lon_label"
 				tools:text="34.35" />
@@ -121,6 +131,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/lat"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/lat"
 				app:layout_constraintEnd_toStartOf="@id/lat" />
 
@@ -130,6 +141,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginHorizontal="4dp"
 				android:textStyle="bold"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/lat_label"
 				tools:text="City" />
@@ -140,6 +152,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginHorizontal="4dp"
 				android:textStyle="italic"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/city"
 				app:layout_constraintStart_toEndOf="@id/city"
 				tools:text="Country" />
@@ -151,6 +164,7 @@
 				android:layout_marginHorizontal="4dp"
 				android:textSize="16sp"
 				android:textStyle="bold"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/city"
 				tools:text="Weather" />
@@ -161,6 +175,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginHorizontal="4dp"
 				android:textStyle="italic"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/weather"
 				tools:text="Description" />
@@ -171,6 +186,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/temperature"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/description" />
 
@@ -179,6 +195,7 @@
 				style="@style/Value.Temp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/temp_header"
 				app:layout_constraintStart_toEndOf="@id/temp_header"
 				tools:text="21\u2103" />
@@ -189,6 +206,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/feels_like"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/temp_header"
 				app:layout_constraintStart_toEndOf="@id/temp" />
 
@@ -197,6 +215,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/feels_like_label"
 				app:layout_constraintStart_toEndOf="@id/feels_like_label"
 				tools:text="22\u2103" />
@@ -208,6 +227,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginStart="8dp"
 				android:text="@string/min"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/temp_header" />
 
@@ -216,6 +236,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/temp_min_label"
 				app:layout_constraintStart_toEndOf="@id/temp_min_label"
 				tools:text="18\u2103" />
@@ -226,6 +247,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/max"
+				android:visibility="invisible"
 				app:layout_constraintStart_toEndOf="@id/temp_min"
 				app:layout_constraintTop_toBottomOf="@id/temp_header" />
 
@@ -234,6 +256,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/temp_max_label"
 				app:layout_constraintStart_toEndOf="@id/temp_max_label"
 				tools:text="24\u2103" />
@@ -244,6 +267,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/wind"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/temp_min" />
 
@@ -252,6 +276,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/wind_header"
 				app:layout_constraintStart_toEndOf="@id/wind_header"
 				tools:text="15m/s" />
@@ -264,6 +289,7 @@
 				android:layout_marginStart="8dp"
 				android:text="@string/degrees"
 				android:textStyle="bold"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/wind_header" />
 
@@ -272,6 +298,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/wind_degrees_label"
 				app:layout_constraintStart_toEndOf="@id/wind_degrees_label"
 				tools:text="232\u00B0" />
@@ -282,6 +309,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/gust"
+				android:visibility="invisible"
 				app:layout_constraintStart_toEndOf="@id/wind_degrees"
 				app:layout_constraintTop_toBottomOf="@id/wind_header" />
 
@@ -290,6 +318,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/wind_gust_label"
 				app:layout_constraintStart_toEndOf="@id/wind_gust_label"
 				tools:text="5m/s" />
@@ -300,6 +329,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/pressure"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/wind_degrees_label" />
 
@@ -308,6 +338,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/pressure_header"
 				app:layout_constraintStart_toEndOf="@id/pressure_header"
 				tools:text="1023hPa" />
@@ -319,6 +350,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginStart="8dp"
 				android:text="@string/sea_level"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/pressure_header" />
 
@@ -327,6 +359,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/sea_level_pressure_label"
 				app:layout_constraintStart_toEndOf="@id/sea_level_pressure_label"
 				tools:text="1023hPa" />
@@ -337,6 +370,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/ground_level"
+				android:visibility="invisible"
 				app:layout_constraintStart_toEndOf="@id/sea_level_pressure"
 				app:layout_constraintTop_toBottomOf="@id/pressure_header" />
 
@@ -345,6 +379,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/ground_level_pressure_label"
 				app:layout_constraintStart_toEndOf="@id/ground_level_pressure_label"
 				tools:text="1024hPa" />
@@ -355,6 +390,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/humidity"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/sea_level_pressure_label" />
 
@@ -363,6 +399,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/humidity_header"
 				app:layout_constraintStart_toEndOf="@id/humidity_header"
 				tools:text="55%" />
@@ -373,6 +410,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/visibility"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/humidity_header" />
 
@@ -381,6 +419,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/visibility_header"
 				app:layout_constraintStart_toEndOf="@id/visibility_header"
 				tools:text="10000m" />
@@ -391,6 +430,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/cloudiness"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/visibility_header" />
 
@@ -399,6 +439,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/cloudiness_header"
 				app:layout_constraintStart_toEndOf="@id/cloudiness_header"
 				tools:text="12%" />
@@ -409,6 +450,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/rain"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/cloudiness_header" />
 
@@ -419,6 +461,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginStart="8dp"
 				android:text="@string/last_hour"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/rain_header" />
 
@@ -427,6 +470,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/rain_last_hour_label"
 				app:layout_constraintStart_toEndOf="@id/rain_last_hour_label"
 				tools:ignore="InOrMmUsage"
@@ -438,6 +482,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/last_3_hours"
+				android:visibility="invisible"
 				app:layout_constraintStart_toEndOf="@id/rain_last_hour"
 				app:layout_constraintTop_toBottomOf="@id/rain_header" />
 
@@ -446,6 +491,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/rain_last_3_hours_label"
 				app:layout_constraintStart_toEndOf="@id/rain_last_3_hours_label"
 				tools:ignore="InOrMmUsage"
@@ -457,6 +503,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/snow"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/rain_last_hour_label" />
 
@@ -467,6 +514,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginStart="8dp"
 				android:text="@string/last_hour"
+				android:visibility="invisible"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/snow_header" />
 
@@ -475,6 +523,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/snow_last_hour_label"
 				app:layout_constraintStart_toEndOf="@id/snow_last_hour_label"
 				tools:ignore="InOrMmUsage"
@@ -486,6 +535,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/last_3_hours"
+				android:visibility="invisible"
 				app:layout_constraintStart_toEndOf="@id/snow_last_hour"
 				app:layout_constraintTop_toBottomOf="@id/snow_header" />
 
@@ -494,6 +544,7 @@
 				style="@style/Value"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:visibility="invisible"
 				app:layout_constraintBaseline_toBaselineOf="@id/snow_last_3_hours_label"
 				app:layout_constraintStart_toEndOf="@id/snow_last_3_hours_label"
 				tools:ignore="InOrMmUsage"

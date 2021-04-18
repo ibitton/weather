@@ -1,0 +1,64 @@
+<resources>
+	<!-- Temperature Unit Preference -->
+	<string-array name="temp_unit_entries">
+		<item>Kelvin</item>
+		<item>Celsius</item>
+		<item>Fahrenheit</item>
+	</string-array>
+
+	<string-array name="temp_unit_values">
+		<item>kelvin</item>
+		<item>celsius</item>
+		<item>fahrenheit</item>
+	</string-array>
+
+	<!-- Speed Unit Preference -->
+	<string-array name="speed_unit_entries">
+		<item>Meters per second</item>
+		<item>Miles per hour</item>
+	</string-array>
+
+	<string-array name="speed_unit_values">
+		<item>meters_per_second</item>
+		<item>miles_per_hour</item>
+	</string-array>
+
+	<!-- Time Format Preference -->
+	<string-array name="time_format_entries">
+		<item>12-hour</item>
+		<item>24-hour</item>
+	</string-array>
+
+	<string-array name="time_format_values">
+		<item>12</item>
+		<item>24</item>
+	</string-array>
+
+	<!-- Icon Size Preference -->
+	<string-array name="icon_size_entries">
+		<item>1x</item>
+		<item>2x</item>
+		<item>4x</item>
+	</string-array>
+
+	<string-array name="icon_size_values">
+		<item>1</item>
+		<item>2</item>
+		<item>4</item>
+	</string-array>
+
+	<!-- Dark Mode Preference -->
+	<string-array name="dark_mode_entries">
+		<item>Follow system setting</item>
+		<item>Light mode</item>
+		<item>Dark mode</item>
+		<item>Auto battery dark mode</item>
+	</string-array>
+
+	<string-array name="dark_mode_values">
+		<item>MODE_NIGHT_FOLLOW_SYSTEM</item>
+		<item>MODE_NIGHT_NO</item>
+		<item>MODE_NIGHT_YES</item>
+		<item>MODE_NIGHT_AUTO_BATTERY</item>
+	</string-array>
+</resources>

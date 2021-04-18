@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<PreferenceCategory app:title="@string/units_header">
+		<DropDownPreference
+			app:defaultValue="@string/default_temp_unit"
+			app:entries="@array/temp_unit_entries"
+			app:entryValues="@array/temp_unit_values"
+			app:key="@string/temp_unit_key"
+			app:title="@string/temp_unit_title"
+			app:useSimpleSummaryProvider="true" />
+
+		<DropDownPreference
+			app:defaultValue="@string/default_speed_unit"
+			app:entries="@array/speed_unit_entries"
+			app:entryValues="@array/speed_unit_values"
+			app:key="@string/speed_unit_key"
+			app:title="@string/speed_unit_title"
+			app:useSimpleSummaryProvider="true" />
+
+		<DropDownPreference
+			app:defaultValue="@integer/default_time_format"
+			app:entries="@array/time_format_entries"
+			app:entryValues="@array/time_format_values"
+			app:key="@string/time_format_key"
+			app:title="@string/time_format_title"
+			app:useSimpleSummaryProvider="true" />
+	</PreferenceCategory>
+
+	<PreferenceCategory app:title="@string/appearance_header">
+		<ListPreference
+			app:defaultValue="@string/default_dark_mode"
+			app:entries="@array/dark_mode_entries"
+			app:entryValues="@array/dark_mode_values"
+			app:key="@string/dark_mode_key"
+			app:title="@string/dark_mode_title"
+			app:useSimpleSummaryProvider="true" />
+
+		<DropDownPreference
+			app:defaultValue="@integer/default_icon_size"
+			app:entries="@array/icon_size_entries"
+			app:entryValues="@array/icon_size_values"
+			app:key="@string/icon_size_key"
+			app:title="@string/icon_size_title"
+			app:useSimpleSummaryProvider="true" />
+	</PreferenceCategory>
+</PreferenceScreen>
